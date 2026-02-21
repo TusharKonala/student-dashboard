@@ -4,8 +4,8 @@ import { FiBell } from "react-icons/fi";
 
 const notifications = [
   {
-    message: "Assignment 12 has been evaluated",
-    time: "2h ago",
+    message: "BeingIITian just posted a new video",
+    time: "Just now",
   },
   {
     message: "New mock test available",
