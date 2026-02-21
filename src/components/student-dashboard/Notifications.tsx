@@ -1,5 +1,4 @@
 import { Box, VStack, Text, HStack } from "@chakra-ui/react";
-import { useState } from "react";
 import { FiBell } from "react-icons/fi";
 
 const notifications = [
@@ -18,7 +17,7 @@ const notifications = [
 ];
 
 const Notifications = () => {
-  const [hasUnread, setHasUnread] = useState(true);
+  const hasUnread = true;
   return (
     <Box
       bg="white"
