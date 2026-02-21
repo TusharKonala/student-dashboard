@@ -12,7 +12,9 @@ import { FiEdit2 } from "react-icons/fi";
 import { useRef, useState } from "react";
 
 const ProfileCard = () => {
-  const [image, setImage] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(
+    localStorage.getItem("profileImage"),
+  );
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +22,7 @@ const ProfileCard = () => {
     if (!file) return;
 
     const imageUrl = URL.createObjectURL(file);
+    localStorage.setItem("profileImage", imageUrl);
     setImage(imageUrl);
   };
 
