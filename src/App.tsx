@@ -18,6 +18,8 @@ const App = () => {
         bg="#F7FAFC"
         w="100%"
         minH="100vh"
+        maxW="100vw"
+        overflow="auto"
       >
         {/* Row 1 */}
         <GridItem>
