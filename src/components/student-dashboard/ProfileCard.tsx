@@ -79,7 +79,7 @@ const ProfileCard = () => {
           </Stat.Root>
 
           <Stat.Root display="flex" flexDirection="column" alignItems="center">
-            <Stat.Label>Study Hours</Stat.Label>
+            <Stat.Label textAlign="center">Study Hours</Stat.Label>
             <Stat.ValueText>124</Stat.ValueText>
           </Stat.Root>
 

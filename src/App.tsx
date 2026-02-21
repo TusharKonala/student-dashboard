@@ -13,6 +13,7 @@ const App = () => {
       gap={6}
       p={6}
       bg="#F7FAFC"
+      w="100%"
       minH="100vh"
     >
       {/* Row 1 */}

@@ -19,8 +19,10 @@ const VennDiagram = () => {
         opacity={0.85}
         padding="10px"
       >
-        <Text>Physics</Text>
-        <Text fontWeight="bold">72%</Text>
+        <Text textAlign="center">Physics</Text>
+        <Text fontWeight="bold" textAlign="center">
+          72%
+        </Text>
       </Box>
 
       {/* Chemistry */}
@@ -35,8 +37,10 @@ const VennDiagram = () => {
         opacity={0.75}
         padding="10px"
       >
-        <Text>Chemistry</Text>
-        <Text fontWeight="bold">68%</Text>
+        <Text textAlign="center">Chemistry</Text>
+        <Text textAlign="center" fontWeight="bold">
+          68%
+        </Text>
       </Box>
 
       {/* Math */}
@@ -52,8 +56,10 @@ const VennDiagram = () => {
         padding="10px"
       >
         <VStack h="100%" justify="center" gap={0}>
-          <Text>Maths</Text>
-          <Text fontWeight="bold">81%</Text>
+          <Text textAlign="center">Maths</Text>
+          <Text fontWeight="bold" textAlign="center">
+            81%
+          </Text>
         </VStack>
       </Box>
       <Box
