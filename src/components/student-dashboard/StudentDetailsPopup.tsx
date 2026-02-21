@@ -30,11 +30,6 @@ const StudentDetailsPopup = () => {
   const [year, setYear] = useState("");
 
   const handleContinue = () => {
-    if (!name.trim() || !year) {
-      alert("Name and Exam Year are required");
-      return;
-    }
-
     sessionStorage.setItem("studentPopupSeen", "true");
     setOpen(false);
   };
@@ -127,6 +122,7 @@ const StudentDetailsPopup = () => {
                 w="100%"
                 _hover={{ bg: "#4c4fdc" }}
                 onClick={handleContinue}
+                disabled={!name.trim() || !year}
               >
                 Continue
               </Button>
