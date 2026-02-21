@@ -2,14 +2,18 @@ import { Container, Box, VStack, Text } from "@chakra-ui/react";
 
 const VennDiagram = () => {
   return (
-    <Container position="relative" w="300px">
+    <Container
+      position="relative"
+      w={{ base: "240px", md: "300px" }}
+      h={{ base: "220px", md: "260px" }}
+    >
       {/* Physics */}
       <Box
         position="absolute"
         left="0px"
         top="20px"
-        w="140px"
-        h="140px"
+        w={{ base: "110px", md: "140px" }}
+        h={{ base: "110px", md: "140px" }}
         borderRadius="full"
         bg="#7FB3E6"
         opacity={0.85}
@@ -24,8 +28,8 @@ const VennDiagram = () => {
         position="absolute"
         left="93px"
         top="20px"
-        w="140px"
-        h="140px"
+        w={{ base: "110px", md: "140px" }}
+        h={{ base: "110px", md: "140px" }}
         borderRadius="full"
         bg="#7FB3E6"
         opacity={0.75}
@@ -40,8 +44,8 @@ const VennDiagram = () => {
         position="absolute"
         left="55px"
         top="95px"
-        w="140px"
-        h="140px"
+        w={{ base: "110px", md: "140px" }}
+        h={{ base: "110px", md: "140px" }}
         borderRadius="full"
         bg="#7FB3E6"
         opacity={0.65}
