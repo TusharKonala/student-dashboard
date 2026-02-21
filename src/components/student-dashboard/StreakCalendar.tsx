@@ -25,41 +25,49 @@ const months = [
 
 const StreakCalendar = () => {
   return (
-    <VStack align="start" spacing={2}>
-      {/* Month Labels */}
-      <HStack spacing={6} pl="42px">
-        {months.map((month) => (
-          <Text key={month} fontSize="xs">
-            {month}
-          </Text>
-        ))}
-      </HStack>
-      <HStack align="start" spacing={2}>
-        {/* Day Labels */}
-        <VStack spacing={1.5}>
-          {days.map((day) => (
-            <Text key={day} fontSize="xs" h="14px">
-              {day}
-            </Text>
-          ))}
-        </VStack>
-        <Grid
-          templateRows="repeat(7, 1fr)"
-          templateColumns="repeat(52, 1fr)"
-          gap={1.5}
+    <Grid
+      templateRows="repeat(7, 1fr)"
+      templateColumns="repeat(52, 1fr)"
+      gap={1.5}
+    >
+      {days.map((day, rowIndex) => (
+        <Text
+          key={day}
+          gridColumn="1"
+          gridRow={rowIndex + 2}
+          fontSize="xs"
+          lineHeight="14px"
         >
-          {user.daysActive.map((active, index) => (
-            <Box
-              key={index}
-              w="14px"
-              h="14px"
-              borderRadius="sm"
-              bg={active ? "#5D5FEF" : "#EDF2F7"}
-            />
-          ))}
-        </Grid>
-      </HStack>
-    </VStack>
+          {day}
+        </Text>
+      ))}
+      {months.map((month, colIndex) => (
+        <Text
+          key={month}
+          gridColumn={colIndex * 4 + 2}
+          gridRow="1"
+          fontSize="xs"
+        >
+          {month}
+        </Text>
+      ))}
+      {user.daysActive.map((active, index) => {
+        const gridColumn = Math.floor(index / 7) + 2;
+        const gridRow = (index % 7) + 2;
+
+        return (
+          <Box
+            key={index}
+            gridColumn={gridColumn}
+            gridRow={gridRow}
+            w="14px"
+            h="14px"
+            borderRadius="sm"
+            bg={active ? "#5D5FEF" : "#EDF2F7"}
+          />
+        );
+      })}
+    </Grid>
   );
 };
 
