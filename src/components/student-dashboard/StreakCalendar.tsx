@@ -27,7 +27,7 @@ const StreakCalendar = () => {
   return (
     <Grid
       templateRows="repeat(7, 1fr)"
-      templateColumns="repeat(52, 14px)"
+      templateColumns="auto repeat(52, 14px)"
       gap={1.5}
     >
       {days.map((day, rowIndex) => (
@@ -44,7 +44,7 @@ const StreakCalendar = () => {
       {months.map((month, colIndex) => (
         <Text
           key={month}
-          gridColumn={colIndex * 4 + 2}
+          gridColumn={`${colIndex * 4 + 2} / span 4`}
           gridRow="1"
           fontSize="xs"
         >
