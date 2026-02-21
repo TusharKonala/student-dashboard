@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, VStack, Text } from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 
 const user = {
   name: "Tushar Konala",
@@ -27,7 +27,7 @@ const StreakCalendar = () => {
   return (
     <Grid
       templateRows="repeat(7, 1fr)"
-      templateColumns="repeat(52, 1fr)"
+      templateColumns="repeat(52, 14px)"
       gap={1.5}
     >
       {days.map((day, rowIndex) => (

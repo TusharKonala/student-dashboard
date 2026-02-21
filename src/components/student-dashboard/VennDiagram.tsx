@@ -1,8 +1,8 @@
-import { Container, Box, VStack, Text } from "@chakra-ui/react";
+import { Box, VStack, Text } from "@chakra-ui/react";
 
 const VennDiagram = () => {
   return (
-    <Container
+    <Box
       position="relative"
       w={{ base: "240px", md: "300px" }}
       h={{ base: "220px", md: "260px" }}
@@ -67,7 +67,7 @@ const VennDiagram = () => {
         <Text fontSize="xs">Numerical</Text>
         <Text fontWeight="bold">75%</Text>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

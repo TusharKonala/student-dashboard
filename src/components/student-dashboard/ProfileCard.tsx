@@ -29,7 +29,8 @@ const ProfileCard = () => {
       p={5}
       borderRadius="lg"
       boxShadow="sm"
-      w={{ base: "100%", sm: "260px" }}
+      w="100%"
+      maxW="260px"
     >
       <VStack gap={4} align="center">
         {/* Avatar + Edit */}

@@ -9,6 +9,7 @@ const App = () => {
     <Grid
       templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
       templateRows="auto"
+      justifyItems="center"
       gap={6}
       p={6}
       bg="#F7FAFC"

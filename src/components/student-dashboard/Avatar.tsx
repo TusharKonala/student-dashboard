@@ -1,10 +1,10 @@
-import { Box, HStack, Container } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import VennDiagram from "./VennDiagram";
 
 const Avatar = () => {
   return (
     <HStack>
-      <Container
+      <Box
         h={{ base: "220px", md: "260px" }}
         display="flex"
         alignItems="center"
@@ -16,7 +16,7 @@ const Avatar = () => {
           fontSize={{ base: "100px", md: "140px" }}
           color="#A5C9ED"
         />
-      </Container>
+      </Box>
       <VennDiagram />
     </HStack>
   );

@@ -25,7 +25,8 @@ const Notifications = () => {
       p={5}
       borderRadius="lg"
       boxShadow="sm"
-      w={{ base: "100%", sm: "320px" }}
+      w="100%"
+      maxW="320px"
     >
       <VStack align="start" gap={4}>
         <HStack justify="space-between" w="100%">
